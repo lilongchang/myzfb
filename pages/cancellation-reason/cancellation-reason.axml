@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="title">
+    <text>取消订单原因</text>
+  </view>
+  <view class="reason-list">
+    <view class="reason-list-item" data-index="1" onTap="checkRadio"> <image src="{{reasonIndex==1?checked:noChecked}}"></image> <text>计划有变，暂时不想寄了</text></view>
+    <view class="reason-list-item" data-index="2" onTap="checkRadio"> <image src="{{reasonIndex==2?checked:noChecked}}"></image> <text>信息填写错误需要修改</text></view>
+    <view class="reason-list-item" data-index="3" onTap="checkRadio"> <image src="{{reasonIndex==3?checked:noChecked}}"></image> <text>更换为其他服务公司</text></view>
+    <view class="reason-list-item" data-index="4" onTap="checkRadio"> <image src="{{reasonIndex==4?checked:noChecked}}"></image> <text>错误下单</text></view>
+    <view class="reason-list-item" data-index="5" onTap="checkRadio"> <image src="{{reasonIndex==5?checked:noChecked}}"></image> <text>其他</text></view>
+  </view>
+  <view class="cancellation-order">
+    <view class="{{reasonIndex==0?'cancellation-order-btn':'cancellation-order-btn actives'}}" onTap="submitReason">提交</view>
+  </view>
+</view>

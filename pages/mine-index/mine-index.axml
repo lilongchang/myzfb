@@ -1,0 +1,38 @@
+<view class="container">
+
+    <view class="mine-top-bg">
+        <view class="head-image">
+            <image src="{{headImage}}"></image>
+            <view class="operator-container">
+                <view class="login-register" onTap="goLoginPage">
+                    <view class="login-view">登录</view>
+                    <view class="line-view"></view>
+                    <view class="register-view">注册</view>
+                </view>
+                <view hidden="{{true}}">7461263213</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-order" onTap="goMyOrder">
+        <view>
+            <image src="../../images/my_order.png" class="order-list-logo"></image>
+            <text class="my-order-text">我的订单</text>
+        </view>
+        <view><image src="../../images/next.png" class="next-logo"></image></view>
+    </view>
+    <!--底部taber切换-->
+    <view class="index-navigation" hidden="{{showTop1||showTop}}">
+        <view class="index-taber-item" onTap="checkPiecePage">
+            <image src="../../images/send_taber_no.png"></image>
+            <text>寄件</text>
+        </view>
+        <view class="index-taber-item" onTap="goCheckPage">
+            <image src="../../images/cha_taber.png"></image>
+            <text>查件</text>
+        </view>
+        <view class="index-taber-item">
+            <image src="../../images/mine_ed.png"></image>
+            <text class="taber-active">我的</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,485 @@
+.container{
+    width: 100%;
+    padding-bottom: 200rpx;
+}
+.left-img image{
+    width: 96rpx;
+    height: 80rpx;
+}
+.send-message{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 25rpx 20rpx 40rpx;
+    background: #fff;
+    border-top: 1rpx solid #e5e5e5;
+}
+.collcetion-msg{
+    background: #f8f8f8;
+}
+.left-img{
+    width: 96rpx;
+    padding: 10rpx 0;
+}
+.left-collcetion{
+    width:96rpx;
+    height:inherit;
+    background: #f2f2f2;
+}
+.add-send-btn{
+    flex: 3;
+    padding: 20rpx 16rpx;
+    position: relative;
+    border-right: 1rpx solid #e3e3e3;
+}
+.start-state{
+    font-size: 36rpx;
+    color: #b2b2b2;
+}
+.add-send-btn image{
+    width: 14rpx;
+    height: 24rpx;
+    position: absolute;
+    right: 15rpx;
+    top:40%;
+}
+.add-addressee{
+    padding:36rpx;
+    background: #fff;
+    text-align: center;
+}
+.add-addressee text{
+    font-size: 28rpx;
+    color: #ff9900;
+}
+.add-addressee image{
+    width:36rpx;
+    height:36rpx;
+    vertical-align: middle;
+    margin-right:20rpx;
+}
+.name-phone{
+    font-size: 36rpx;
+    color: #1b1b1b;
+}
+.person-info{
+    font-size: 26rpx;
+    color: #333;
+    padding:10rpx 0;
+}
+.address-detail{
+    font-size: 24rpx;
+    color: #959595;
+}
+.address{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.address image{
+    width: 40rpx;
+    height: 42rpx;
+}
+.text-address{
+    font-size: 24rpx;
+    color: #30a5ff;
+    margin-top: 12rpx;
+}
+.delete-text{
+    color: #f65e62;
+}
+.send-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40rpx;
+    background: #fff;
+    height:88rpx;
+    margin-top: 20rpx;
+    border-bottom: 1rpx solid #dadADA;
+}
+.send-text{
+    font-size: 28rpx;
+    color: #333;
+}
+.send-msg-logo{
+    width: 38rpx;
+    height: 38rpx;
+    vertical-align: middle;
+    margin-right: 30rpx;
+}
+.up-down{
+    width:24rpx;
+    height:14rpx;
+}
+.detail-message{
+    background: #fff;
+    padding-left:60rpx;
+    border-bottom: 1rpx solid #dadada;
+}
+.msg-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:88rpx;
+    padding-right:40rpx;
+    border-bottom: 1rpx solid #dadada;
+}
+.right-logo{
+    width: 14rpx;
+    height: 24rpx;
+}
+.remark{
+    font-size: 28rpx;
+    color: #000;
+}
+.choice{
+    font-size: 28rpx;
+    color: #b2b2b2;
+    margin-right: 20rpx;
+}
+.modifies-num{
+    display: flex;
+    flex-direction: row;
+    height:56rpx;
+    align-items: center;
+    justify-content: center;
+    border:1rpx solid #d9eeee
+}
+.reduce-btn, .increase-btn{
+    width:62rpx;
+    height:56rpx;
+    line-height: 56rpx;
+    text-align: center;
+}
+.reduce-btn{
+    border-right: 1rpx solid #d9eeee;
+}
+.increase-btn{
+    border-left: 1rpx solid #d9eeee;
+}
+.count{
+    width:130rpx;
+    height:56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #545454;
+}
+.count input{
+    width:100%;
+    height:0.5rem;
+    margin-top: 0.02rem;
+    padding:0;
+}
+.invisible-tip{
+    width: 30rpx;
+    height: 30rpx;
+    position: relative;
+    left:4rpx;
+    bottom: 2px;
+}
+.msg-item-1 image{
+    width:24rpx;
+    height:24rpx;
+    vertical-align: middle;
+    margin-right: 12rpx;
+}
+.msg-item-1 text{
+    font-size: 28rpx;
+    color: #b2b2b2;
+}
+.msg-item-1 .active{
+    color: #ff9900;
+}
+.shows{
+    display: none;
+}
+.popup-main{
+    background: #fff;
+    padding: 30rpx;
+}
+.type-item{
+    width:190rpx;
+    height: 70rpx;
+    display: inline-block;
+    font-size: 32rpx;
+    color: #141414;
+    border: 2rpx solid #b3b3b3;
+    border-radius: 35rpx;
+    text-align: center;
+    line-height: 70rpx;
+    margin-right: 35rpx;
+    margin-bottom:20rpx;
+}
+.type-item1{
+    width:190rpx;
+    height: 70rpx;
+    display: inline-block;
+    font-size: 32rpx;
+    color: #141414;
+    border: 2rpx solid #b3b3b3;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 70rpx;
+    margin-right: 35rpx;
+    margin-bottom:20rpx;
+}
+.actived{
+    background: #ff9900;
+    color: #fff;
+    border-color: #ff9900;
+}
+.pop-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20rpx;
+    padding: 15rpx 0;
+}
+.pop-title text{
+    font-size: 32rpx;
+    color: #141414;
+}
+.pop-title image{
+    width: 34rpx;
+    height:34rpx;
+}
+.warning-text{
+    font-size: 24rpx;
+    color: #969696;
+    line-height: 45rpx;
+}
+.invisible-modal{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin:auto;
+    width:600rpx;
+    height: 230rpx;
+    padding-top:60rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+}
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 9;
+    background: rgba(0,0,0,0.3);
+}
+.invisible-modal text{
+    font-size: 36rpx;
+    color: #666;
+    line-height: 60rpx;
+}
+.sure-btn{
+    height:88rpx;
+    margin-top:22rpx;
+    background: #ff9900;
+    text-align: center;
+    line-height: 88rpx;
+    color: #fff;
+}
+.said-text{
+    font-size: 28rpx;
+    color: #333;
+    height:70rpx;
+    line-height:70rpx;
+    border-bottom: 1rpx solid #dcdcdc;
+    margin-bottom: 30rpx;
+}
+.said-container{
+    width:30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.text-detail-page{
+    white-space: nowrap;
+    align-items: flex-end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   height: 100%
+}
+.text-detail{
+    width:100%;
+    height:70rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.supplement{
+    border: 1rpx solid #dddddd;
+    border-radius: 6rpx;
+    padding: 30rpx;
+    height:110rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+.said-sure-btn{
+    font-size: 32rpx;
+    background: #ff9a00;
+    color: #fff;
+    text-align: center;
+    border-radius: 6rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    margin-top: 20rpx;
+}
+.place-an-order{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    height:100rpx;
+    position: fixed;
+    bottom:98rpx;
+}
+.agreement{
+    flex:1;
+    background: #666;
+    font-size: 24rpx;
+    color: #aaa;
+    line-height: 100rpx;
+    padding-left:25rpx;
+}
+.agreement text{
+    color: #ff9900;
+}
+.agreement image{
+    width:32rpx;
+    height:32rpx;
+    vertical-align: middle;
+    margin-right:10rpx;
+}
+.order-btn{
+    width:230rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #fff;
+    background: #ff9900;
+}
+.index-navigation{
+    display: flex;
+    width:100%;
+    height:98rpx;
+    background: #fff;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+.index-taber-item{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-taber-item image{
+    width:48rpx;
+    height:48rpx;
+}
+.index-taber-item text{
+    margin-top:10rpx;
+    font-size: 20rpx;
+    color: #2e2e2e;
+}
+.index-taber-item .taber-active{
+    color: #ed7500;
+}
+.charge-standard{
+    background: #fff;
+    margin-top:10rpx;
+    height:88rpx;
+    line-height: 88rpx;
+    padding:0 28rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.charge-standard .freight{
+    font-size: 24rpx;
+    color: #333;
+}
+.charge-standard .money{
+    font-size: 34rpx;
+    color: #ff9900;
+    padding:0 5rpx;
+}
+.charge-standard .time-number{
+    font-size: 28rpx;
+    color: #ff9900;
+    padding:0 5rpx;
+}
+.charge-standard .come-time{
+    font-size: 24rpx;
+    color: #666;
+}
+/*韵达合约条款*/
+.contract-terms{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin:auto;
+    width:600rpx;
+    height: 890rpx;
+    padding:40rpx 0 0 0;
+    background: #fff;
+    border-radius: 16rpx;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+}
+.close-modal{
+    width:34rpx;
+    height:34rpx;
+    position: absolute;
+    top:20rpx;
+    right:20rpx;
+}
+.contract-terms .title{
+    font-size: 36rpx;
+    color: #21110d;
+    text-align: center;
+}
+.contract-section{
+    padding:0 40rpx;
+    height:700rpx;
+    overflow: auto;
+    font-size: 26rpx;
+    color: #333;
+    margin-top:40rpx;
+    margin-bottom:10rpx;
+    line-height: 38rpx;
+    text-align: left;
+}
+.contract-terms .bottom-button{
+    height:88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    color: #fff;
+    font-size: 34rpx;
+    background: #ff9900;
+    position: absolute;
+    bottom:0;
+    width:100%;
+}

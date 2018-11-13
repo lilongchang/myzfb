@@ -1,0 +1,96 @@
+.mine-top-bg{
+    width:750rpx;
+    height:280rpx;
+    background: url('../../images/mine_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.mine-top-bg{
+    text-align: center;
+    padding-top:30rpx;
+}
+.head-image{
+    width:140rpx;
+    height:140rpx;
+    display: inline-block;
+    background: url('../../images/head_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.head-image image{
+    width:100%;
+    height:100%;
+}
+.operator-container{
+    width:160rpx;
+    display: inline-block;
+    margin-top:15rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+.login-register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-register .line-view{
+    width:2rpx;
+    height:30rpx;
+    background: #fff;
+    margin:0 15rpx;
+}
+.my-order{
+    height:100rpx;
+    line-height: 100rpx;
+    background: #fff;
+    padding:0 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:20rpx;
+}
+.order-list-logo{
+    width:44rpx;
+    height:44rpx;
+    vertical-align: middle;
+    margin-right:25rpx;
+}
+.my-order-text{
+    font-size: 32rpx;
+    color: #333;
+}
+.next-logo{
+    width:14rpx;
+    height:24rpx;
+}
+/*底部table切换*/
+.index-navigation{
+    display: flex;
+    width:100%;
+    height:98rpx;
+    background: #fff;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+.index-taber-item{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-taber-item image{
+    width:48rpx;
+    height:48rpx;
+}
+.index-taber-item text{
+    margin-top:10rpx;
+    font-size: 20rpx;
+    color: #2e2e2e;
+}
+.index-taber-item .taber-active{
+    color: #ed7500;
+}

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="order-title">订单号：28374293874298374</view>
+  <view class="main-section">
+    <image src="../../images/way_to.png"></image>
+    <view class="content-risk">
+      <view>快递小哥正在向您的地址飞奔</view>
+      <view>请保持联系方式畅通</view>
+    </view>
+  </view>
+  <view class="cancellation-order">
+    <view class="cancellation-order-btn" onTap="cancellationOrder">取消订单</view>
+  </view>
+
+</view>

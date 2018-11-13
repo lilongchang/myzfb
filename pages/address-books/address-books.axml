@@ -1,0 +1,101 @@
+<view class="address-book-container">
+  <view class="address-search">
+    <image src="../../images/search.png" class="search-logo"></image>
+    <input type="text" class="search-input" onInput="inputSearchContent" value="{{searchContent}}"
+           placeholder-class="placeholder-style" placeholder="请输入姓名/电话/地址"/>
+    <view class="search-close-view" hidden="{{!isInputSearch}}" onTap="clearSearchContent">
+      <image src="../../images/close_2.png" class="search-close"></image>
+    </view>
+  </view>
+  <!--地址簿有内容时-->
+  <view class="address-block" >
+    <view class="address-item">
+      <view class="checked-more">
+        <view class="checked-button">
+          <image src="{{setDefaultAddress?checkedLogo:unCheckedLogo}}" onTap="switchDefaultArea"></image>
+        </view>
+        <view class="address-detail">
+          <view class="base-info-address">
+            <text>李龙昌</text>
+            <text>13585854373</text>
+          </view>
+          <view class="address-message">上海市，上海市，青浦区，盈巷东路6779号盈巷东路6779号盈巷东路6779号</view>
+        </view>
+      </view>
+      <view class="address-edit">
+        <view class="set-default-address" onTap="switchDefaultArea">
+          <image src="{{setDefaultAddress?checkedLogo:unCheckedLogo}}"></image>
+          <text>默认地址</text>
+        </view>
+        <view class="operator">
+          <view class="edit-button">
+            <image src="../../images/edit.png"></image>
+            编辑
+          </view>
+          <view class="delete-button">
+            <image src="../../images/delete.png"></image>
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="address-item">
+      <view class="checked-more">
+        <view class="checked-button">
+          <image src="{{setDefaultAddress?checkedLogo:unCheckedLogo}}" onTap="switchDefaultArea"></image>
+        </view>
+        <view class="address-detail">
+          <view class="base-info-address">
+            <text>李龙昌</text>
+            <text>13585854373</text>
+          </view>
+          <view class="address-message">上海市，上海市，青浦区，盈港东路6779号</view>
+        </view>
+      </view>
+      <view class="address-edit">
+        <view class="set-default-address" onTap="switchDefaultArea">
+          <image src="{{setDefaultAddress?checkedLogo:unCheckedLogo}}"></image>
+          <text>默认地址</text>
+        </view>
+        <view class="operator">
+          <view class="edit-button">
+            <image src="../../images/edit.png"></image>
+            编辑
+          </view>
+          <view class="delete-button">
+            <image src="../../images/delete.png"></image>
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--地址簿为空时-->
+  <view class="no-content" hidden="{{true}}">
+    <view><image src="../../images/nocontent.png"></image></view>
+    <view class="no-content-remark"><text>地址簿无内容，点击下方地址簿进行添加</text></view>
+  </view>
+  <!--当没有搜索到地址内容时-->
+  <view class="no-content" hidden="{{true}}">
+    <view><image src="../../images/noresult.png"></image></view>
+    <view class="no-result-remark"><text>真抱歉，没有符合条件的地址</text></view>
+  </view>
+  <!--单选显示添加按钮-->
+  <view class="add-address" hidden="{{true}}">
+    <view class="zhifubao-address">支付宝地址簿</view>
+    <view class="add-new-address">+新增地址</view>
+  </view>
+  <!--进入多选模式-->
+  <view class="checked-address-man">
+     <view class="checked-man-container">
+       <view class="scroll-container">
+         <view class="address-man-item"><view class="edge-angle"></view>李明</view>
+         <view class="address-man-item"><view class="edge-angle"></view>李明</view>
+         <view class="address-man-item"><view class="edge-angle"></view>李明</view>
+         <view class="address-man-item"><view class="edge-angle"></view>李明</view>
+       </view>
+
+     </view>
+    <view class="checked-save-button">确定 <text>(3)</text></view>
+  </view>
+</view>

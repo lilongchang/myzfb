@@ -1,0 +1,79 @@
+<view class='search-container'>
+  <view class="switch-table">
+    <view class="{{switchIndex==0?'actives':''}}" data-index="0" onTap="switchTable">我的寄件</view>
+    <view class="{{switchIndex==1?'actives':''}}" data-index="1" onTap="switchTable">我的收件</view>
+  </view>
+  <view class="my-mail" hidden="{{switchIndex==0?false:true}}">
+    <view class="query-list-item">
+      <view class="waybill-number">订单号：1745628732347</view>
+      <view class="signing-time">签收时间：2018-11-11</view>
+      <view class="send-collection-msg">
+        <view class="sender-massage">
+          <view><text class="city">哈尔滨市</text></view>
+          <view class="name"><text>李四</text></view>
+        </view>
+        <view class="express-state">
+          <view class="express-state-text"><text>已签收</text></view>
+          <image src="../../images/query_list.png"></image>
+        </view>
+        <view class="collection-message">
+          <view><text class="city">广州市</text></view>
+          <view class="name"><text>张三</text></view>
+        </view>
+      </view>
+      <view class="operator-logo" onTap="showOperator" data-value="0"><image src="../../images/operator.png"></image></view>
+      <view class="show-operator" hidden="{{showOperatorIndex==0?false:true}}">
+        <view class="detail-btn" onTap="onTopBtnTap"> <image src="../../images/detail.png"></image> 详情</view>
+        <view class="line"></view>
+        <view class="delete-btn"> <image src="../../images/del_address.png"></image>删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="my-collcetion" hidden="{{switchIndex==1?false:true}}">
+    <view class="no-search-content">
+      <image src="../../images/nosearch.png"></image>
+      <view class="text-content">暂无记录~</view>
+    </view>
+  </view>
+  <view class="mask" hidden="{{invisibleShow}}" onTap="closeMask"></view>
+  <!--运单详情弹窗-->
+  <view>
+    <popup show="{{showTop}}" position="bottom" onClose="onPopupClose">
+      <view class="popup-main">
+        <view class="popup-header">
+          <view class="popup-title">订单详情</view>
+          <image src="/images/close.png" onTap="onPopupClose"></image>
+        </view>
+        <view class="detail-city">
+          <text>杭州市</text>
+          <image src="../../images/red-arrow.png"></image>
+          <text>宁波市</text>
+        </view>
+        <view class="send-message">
+          <view class="left-img">
+            <image src="../../images/send.png"></image>
+          </view>
+          <view class="add-send-btn">
+            <view>
+              <view class="name-phone">李龙昌 13585854373</view>
+              <view class="person-info">上海，上海市，青浦区</view>
+              <view class="address-detail">重固镇盈巷东路6779号3幢6单元501</view>
+            </view>
+          </view>
+        </view>
+        <view class="send-message">
+          <view class="left-img">
+            <image src="../../images/get.png"></image>
+          </view>
+          <view class="add-send-btn">
+            <view>
+              <view class="name-phone">李龙昌 13585854373</view>
+              <view class="person-info">上海，上海市，青浦区</view>
+              <view class="address-detail">重固镇盈巷东路6779号3幢6单元501</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </popup>
+  </view>
+</view>

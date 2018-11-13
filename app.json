@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/send-index/send-index",
+    "pages/mine-order/mine-order",
+    "pages/checkout-success/checkout-success",
+    "pages/mine-index/mine-index",
+    "pages/login-register/login-register",
+    "pages/check-piece/check-piece",
+    "pages/search-bynumber/search-bynumber",
+    "pages/order-details/order-details",
+    "pages/cancellation-order/cancellation-order",
+    "pages/cancellation-reason/cancellation-reason",
+    "pages/address-books/address-books",
+    "pages/address-book/address-book",
+    "pages/addressee/addressee",
+    "pages/add-sender/add-sender",
+    "pages/index/index",
+    "pages/order-hasCancel/order-hasCancel"
+  ],
+  "window": {
+    "defaultTitle": "韵达快递"
+  }
+}

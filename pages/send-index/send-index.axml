@@ -1,0 +1,204 @@
+<view class="container">
+    <view class="send-message">
+        <view class="left-img">
+            <image src="../../images/send.png"></image>
+        </view>
+        <view class="add-send-btn">
+            <text hidden="{{true}}" class="start-state" onTap="addSenderPerson">添加寄件人信息</text>
+            <!-- <view>
+                <view class="name-phone">李龙昌 13585854373</view>
+                <view class="person-info">上海，上海市，青浦区</view>
+                <view class="address-detail">重固镇盈巷东路6779号3幢6单元501</view>
+            </view>
+            <image src="../../images/next.png"></image> -->
+        </view>
+        <view class="address" onTap="goAddressBook">
+            <image src="../../images/people.png"></image>
+            <text class="text-address">地址簿</text>
+        </view>
+    </view>
+    <view>
+        <view class="send-message" style="margin-top: 10rpx;border: none">
+            <view class="left-img">
+                <image src="../../images/get.png"></image>
+            </view>
+            <view class="add-send-btn">
+                <text onTap="addCollection" class="start-state" >添加收件人信息</text>
+                <!-- <view>
+                    <view class="name-phone">李龙昌 16585742362</view>
+                    <view class="person-info">上海，上海市，青浦区</view>
+                    <view class="address-detail">重固镇盈巷东路6779号3幢6单元501</view>
+                </view>
+                <image src="../../images/next.png"></image> -->
+            </view>
+            <view class="address" onTap="goAddressBooks">
+                <image src="../../images/people.png"></image>
+                <text class="text-address">地址簿</text>
+            </view>
+        </view>
+        <!--<view class="send-message collcetion-msg " style="border: none;padding: 0">-->
+            <!--<view class="left-collcetion">-->
+            <!--</view>-->
+            <!--<view class="add-send-btn" style="padding: 20rpx 0">-->
+                <!--<view>-->
+                    <!--<view class="name-phone">李龙昌 16585742362</view>-->
+                    <!--<view class="person-info">上海，上海市，青浦区</view>-->
+                    <!--<view class="address-detail">重固镇盈巷东路6779号3幢6单元501</view>-->
+                <!--</view>-->
+                <!--<image src="../../images/next.png"></image>-->
+            <!--</view>-->
+            <!--<view class="address">-->
+                <!--<image src="../../images/delete.png"></image>-->
+                <!--<text class="text-address delete-text">删除</text>-->
+            <!--</view>-->
+        <!--</view>-->
+        <view class="add-addressee" hidden="{{false}}">
+            <image src="../../images/add.png"></image>
+            <text>添加收件人</text>
+        </view>
+    </view>
+
+    <view class="send-detail">
+        <view>
+            <image class="send-msg-logo" src="{{sendImg}}"></image>
+            <text class="send-text">寄件物品详细资料</text>
+        </view>
+        <view onTap="toggleUps">
+            <image class="up-down" src="{{showDetail?downUpImg:upDownImg}}"></image>
+        </view>
+    </view>
+
+    <view class="detail-message" hidden="{{showDetail?true:false}}">
+        <view class="msg-item">
+            <text class="remark">对快递小哥说</text>
+            <view onTap="onTopBtnTap1" class="said-container">
+                <view class='text-detail-page'>{{saidText}}</view>
+                <view><image class="right-logo" src="../../images/next.png"></image></view>
+                
+            </view>
+
+        </view>
+        <view class="msg-item">
+            <text class="remark">快件类型</text>
+            <view onTap="onTopBtnTap">
+                <text class="choice">{{currentName}}</text>
+                <image class="right-logo" src="../../images/next.png"></image>
+            </view>
+        </view>
+        <view class="msg-item">
+            <text class="remark">物品重量</text>
+            <view class="modifies-num">
+                <view class="reduce-btn" onTap="reduceCount">-</view>
+                <view class="count"><input type="text" maxlength="4" value="{{weightGoods}}" onInput="setWeightGoods"></view>
+                <view class="increase-btn" onTap="addCount">+</view>
+            </view>
+        </view>
+        <view class="msg-item msg-item-1" style="border-bottom: none">
+            <view class="to-pay" onTap="choice" data-index="0">
+                <image src="{{current==0?choose:noChoose}}"></image>
+                <text class="{{current==0?'active':''}}">到付</text>
+            </view>
+            <view class="price" onTap="choice" data-index="1">
+                <image src="{{current==1?choose:noChoose}}"></image>
+                <text class="{{current==1?'active':''}}">保价</text>
+            </view>
+            <view class="invisible" onTap="choice" data-index="2">
+                <image src="{{current==2?choose:noChoose}}"></image>
+                <text class="{{current==2?'active':''}}">隐形面单</text>
+                <image src="../../images/tip.png" class="invisible-tip"></image>
+            </view>
+        </view>
+    </view>
+    <view class="charge-standard">
+        <view class="freight">运费：￥<text class="money">12</text>起</view>
+        <view class="come-time">上门取件时间<text class="time-number">今天14:20</text>前</view>
+    </view>
+    <!--快件类型弹窗-->
+    <view>
+        <popup show="{{showTop}}" position="bottom" onClose="onPopupClose">
+            <view class="popup-main">
+                <view class="pop-title">
+                    <text>快件类型</text>
+                    <image src="/images/close.png" onTap="onPopupClose"></image>
+                </view>
+                <view>
+                    <view a:for="{{type}}" a:for-item="item" data-index="{{item.value}}" data-value="{{item.name}}"
+                          onTap="selectType" class="{{currentIndex==item.value?'type-item actived':'type-item'}}">
+                        {{item.name}}
+                    </view>
+                </view>
+                <view>
+                    <text class="warning-text">禁寄物品：各种枪支弹药、易燃易爆、化学危险品、毒品、各类生化制品、传染性感染性物质、各类非法伪造/侵权物品...</text>
+                </view>
+            </view>
+        </popup>
+    </view>
+    <!--对快递小哥说弹窗-->
+    <view>
+        <popup show="{{showTop1}}" position="bottom" onClose="onPopupClose1">
+            <view class="popup-main">
+                <view class="pop-title">
+                    <text>我要对快递小哥说</text>
+                    <image src="/images/close.png" onTap="onPopupClose1"></image>
+                </view>
+                <view class="said-text">
+                    <view class="text-detail">{{saidText}}</view>
+                </view>
+
+                <view>
+                    <view a:for="{{remarksItems}}" a:for-item="item" data-index="{{index}}" onTap="selectType1"
+                          class="{{item.checked?'type-item1 actived':'type-item1'}}">
+                        {{item.key}}
+                    </view>
+                </view>
+                <view>
+                    <textarea maxlength="-1" onInput="bindKeyInput" class="supplement" value="{{inputText}}"
+                              placeholder="还有什么想说的可以在这里补充哦"/>
+                </view>
+                <view class="said-sure-btn" onTap="saveSaid">确定</view>
+            </view>
+        </popup>
+    </view>
+    <!--隐形面单弹窗-->
+    <view class="invisible-modal" hidden="{{invisibleShow}}">
+        <view style="padding: 0 40rpx">
+            <text>收件人姓名和电话号码不出现在任何运输环节，保护收件人隐私</text>
+        </view>
+        <view class="sure-btn" onTap="closeModal">确定</view>
+    </view>
+    <view class="mask" hidden="{{invisibleShow && isShowContract}}"></view>
+    <view class="place-an-order" hidden="{{showTop1||showTop}}">
+        <view class="agreement">
+            <image src="../../images/choose.png"></image>
+            阅读并同意
+            <text onTap="readyContract">《韵达速递合约条款》</text>
+        </view>
+        <view class="order-btn" onTap="goCheckoutSuccess">下单</view>
+    </view>
+    <!--韵达快递合约条款-->
+    <view class="contract-terms" hidden="{{isShowContract}}">
+        <image src="../../images/close.png" class="close-modal" onTap="closeContractModal"></image>
+        <view class="title">韵达快递合约条款</view>
+        <view class="contract-section">
+            <view><text>1.为保证货物的安全及时到达，委托人应如实填写申报托运货物的价值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话</text></view><view><text>为保证货物的安全及时到达，委托人应如实填写申报托运货物的价值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话</text></view>
+            <view><text>2.为保证货物的安全及时到达，委托人应如实填写申报托运货物的价值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话值和品名，并准确清楚的填写、委托人、收货人名称或姓名、地址、联系人电话</text></view>
+        </view>
+        <view class="bottom-button">我已阅读并同意</view>
+    </view>
+    <!--底部taber切换-->
+    <view class="index-navigation" hidden="{{showTop1||showTop}}">
+        <view class="index-taber-item">
+            <image src="../../images/send_taber.png"></image>
+            <text class="taber-active">寄件</text>
+        </view>
+        <view class="index-taber-item" onTap="checkPiecePage">
+            <image src="../../images/cha_taber.png"></image>
+            <text>查件</text>
+        </view>
+        <view class="index-taber-item" onTap="goMinePage">
+            <image src="../../images/mine_taber.png"></image>
+            <text>我的</text>
+        </view>
+    </view>
+</view>
+

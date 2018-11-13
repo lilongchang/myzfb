@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="order-title">运单号：346198741931</view>
+    <view class="step-container">
+        <view class="detail-item">
+            <view class="detail-item-time">
+                <view>16:37:33</view>
+                <view>2018-09-11</view>
+            </view>
+            <!--<view class="middle-img"><image class="middle"  src="../../images/spot_first.png"></image></view>-->
+            <view class="middle-img"><image class="sing-in"  src="../../images/signin.png"></image></view>
+            <view class="detail-item-text">
+                <view>已签收</view>
+            </view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-item-time">
+                <view>16:37:33</view>
+                <view>2018-09-11</view>
+            </view>
+            <view class="middle-img"><image class="middle" src="../../images/line_spot.png"></image></view>
+            <view class="detail-item-text">
+                <view>杭州分拨中心装车，发往宁波</view>
+            </view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-item-time">
+                <view>16:37:33</view>
+                <view>2018-09-11</view>
+            </view>
+            <view class="middle-img"><image class="middle" src="../../images/line_spot.png"></image></view>
+            <view class="detail-item-text">
+                <view>杭州分拨中心装车，发往宁波</view>
+            </view>
+        </view>
+
+        <view class="detail-item">
+            <view class="detail-item-time">
+                <view>16:37:33</view>
+                <view>2018-09-11</view>
+            </view>
+            <view class="middle-img"><image class="last" src="../../images/spot_last.png"></image></view>
+            <view class="detail-item-text">
+                <view>杭州分拨中心装车，发往宁波</view>
+            </view>
+        </view>
+        <view class="lines-step"></view>
+    </view>
+</view>

@@ -1,0 +1,294 @@
+.search-container{
+    width: 100%
+}
+.index-search{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  height: 88rpx;
+  padding: 0 20rpx 0 10rpx;
+}
+.search-top{
+    padding: 20rpx 30rpx
+}
+.search-input{
+ flex: 1
+}
+.index-search image{
+    width:40rpx;
+    height:40rpx;
+}
+/*table切换*/
+.switch-table{
+    background: #fafafa;
+    height:100rpx;
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: row;
+}
+.switch-table>view{
+    flex:1;
+    text-align: center;
+    font-size: 32rpx;
+    color: #959595;
+}
+.switch-table .actives{
+    color: #333;
+    border-bottom: 4rpx solid #ff9900;
+}
+/*查询快递列表*/
+.query-list-item{
+    background: #fff;
+    padding: 30rpx 40rpx;
+    margin-bottom:20rpx;
+    border-bottom: 1rpx solid #ededed;
+    border-top: 1rpx solid #ededed;
+    position: relative;
+}
+.operator-logo{
+    position: absolute;
+    width:38rpx;
+    height:28rpx;
+    top:45rpx;
+    right:30rpx;
+}
+.operator-logo image{
+    width:38rpx;
+    height:28rpx;
+}
+.waybill-number{
+   font-size: 24rpx;
+    color: #909090;
+}
+.signing-time{
+    font-size: 24rpx;
+    color: #959595;
+    margin-top:14rpx;
+}
+.send-collection-msg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:24rpx;
+}
+.sender-massage{
+    text-align: left;
+}
+.express-state{
+    text-align: center;
+}
+.collection-message{
+    text-align: right;
+}
+.express-state image{
+    width:140rpx;
+    height:14rpx;
+}
+.query-list-item .city{
+    font-size: 30rpx;
+    color: #333;
+}
+.express-state-text{
+    font-size: 30rpx;
+    color: #fe5e62;
+}
+.query-list-item .name{
+    font-size: 28rpx;
+    color: #959595;
+    margin-top:24rpx;
+}
+.show-operator{
+    width:360rpx;
+    height:78rpx;
+    z-index: 10;
+    background: #4c5154;
+    border-radius: 10rpx;
+    position: absolute;
+    top:20rpx;
+    right:80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.show-operator .detail-btn,.show-operator .delete-btn{
+    flex: 1;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 78rpx;
+    color: #fff;
+}
+.show-operator .line{
+    width:2rpx;
+    height:50rpx;
+    background: #373d40;
+}
+.show-operator image{
+    width:44rpx;
+    height:44rpx;
+    vertical-align: middle;
+    margin-right:10rpx;
+}
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 9;
+    /*background: rgba(0,0,0,0.3);*/
+    background: transparent;
+}
+
+.index-navigation{
+    display: flex;
+    width:100%;
+    height:98rpx;
+    background: #fff;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+.index-taber-item{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-taber-item image{
+    width:48rpx;
+    height:48rpx;
+}
+.index-taber-item text{
+    margin-top:10rpx;
+    font-size: 20rpx;
+    color: #2e2e2e;
+}
+.index-taber-item .taber-active{
+    color: #ed7500;
+}
+.popup-main{
+    background: #fff;
+}
+.popup-header{
+    height:90rpx;
+    border-bottom: 1rpx solid rgb(238,238,238);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:20rpx 30rpx;
+}
+.popup-header image{
+    width: 34rpx;
+    height:34rpx;
+
+}
+.popup-title{
+    font-size: 32rpx;
+    line-height: 60rpx;
+    color: #333;
+    border-bottom: 4rpx solid #ff9900;
+    width:150rpx;
+}
+.detail-city{
+    text-align: center;
+    height:182rpx;
+    line-height: 182rpx;
+    border-bottom: 1rpx solid rgb(238,238,238);
+}
+.detail-city text{
+    font-size: 40rpx;
+    color: #231815;
+}
+.detail-city image{
+    width:150rpx;
+    vertical-align: middle;
+    height:10rpx;
+    margin:0 40rpx;
+}
+
+.left-img image{
+    width: 96rpx;
+    height: 80rpx;
+}
+.send-message{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 25rpx 20rpx 40rpx;
+    background: #fff;
+}
+.collcetion-msg{
+    background: #f8f8f8;
+}
+.left-img{
+    width: 96rpx;
+    padding: 10rpx 0;
+}
+.left-collcetion{
+    width:96rpx;
+    height:inherit;
+    background: #f2f2f2;
+}
+.add-send-btn{
+    flex: 3;
+    padding: 20rpx 16rpx;
+    position: relative;
+}
+.start-state{
+    font-size: 36rpx;
+    color: #b2b2b2;
+}
+.add-addressee{
+    padding:36rpx;
+    background: #fff;
+    text-align: center;
+}
+.add-addressee text{
+    font-size: 28rpx;
+    color: #ff9900;
+}
+.add-addressee image{
+    width:36rpx;
+    height:36rpx;
+    vertical-align: middle;
+    margin-right:20rpx;
+}
+.name-phone{
+    font-size: 36rpx;
+    color: #1b1b1b;
+}
+.person-info{
+    font-size: 26rpx;
+    color: #333;
+    padding:10rpx 0;
+}
+.address-detail{
+    font-size: 24rpx;
+    color: #959595;
+}
+.delete-text{
+    color: #f65e62;
+}
+.no-search-content{
+    text-align: center;
+    padding-top:100rpx;
+}
+.no-search-content image{
+    width:340rpx;
+    height:340rpx;
+}
+.no-search-content .text-content{
+    font-size: 30rpx;
+    color: #ccc;
+    text-align: center;
+    margin-top:20rpx;
+}

@@ -1,0 +1,38 @@
+<view class="container">
+  <view><image src="../../images/login_bg.png" class="login-background"></image></view>
+  <view class="switch-tab">
+    <view class="{{switchTable==0?'actives':''}}" data-index="0" onTap="switchTable">支付宝登录</view>
+    <view class="{{switchTable==1?'actives':''}}" data-index="1" onTap="switchTable">短信验证码登录</view>
+  </view>
+  <view class="zfb-login" hidden="{{switchTable==0?false:true}}">
+    <view><image src="../../images/zfb.png"></image></view>
+    <view class="login-now zfb-btn">支付宝一键登录</view>
+  </view>
+  <view class="sms-login" hidden="{{switchTable==1?false:true}}">
+       <view class="input-area">
+         <view class="phone">
+           <view class="input-phone">
+             <image src="../../images/phone_logo.png" class="phone-logo"></image>
+             <view class="input-view"><input type="number" placeholder="请输入手机号" maxlength="11" value="{{phoneNumber}}" onInput="inputPhone" placeholder-class="placeholder-style"></view>
+             <view class="input-close-view" hidden="{{!isInputPhone}}" onTap="clearPhoneInput">
+               <image src="../../images/close_2.png" class="search-close"></image>
+             </view>
+           </view>
+           <view class="lines"></view>
+         </view>
+         <view class="phone">
+           <view class="input-phone">
+             <image src="../../images/code.png" class="phone-logo"></image>
+             <view class="input-view"><input type="text" placeholder="请输入验证码" placeholder-class="placeholder-style"></view>
+             <view class="input-close-view">
+               <view class="{{!isValidNo?'get-code-button':'get-code-button get-active'}}" onTap="senderCode">{{validationInfo}}</view>
+             </view>
+           </view>
+           <view class="lines"></view>
+         </view>
+
+       </view>
+    <view class="login-now">立即登录</view>
+  </view>
+
+</view>

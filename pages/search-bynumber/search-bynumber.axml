@@ -1,0 +1,17 @@
+<view class="search-container">
+  <view class='search-top'>
+    <view class="index-search">
+      <view class='search-input'>
+        <input type="text" placeholder-class="placeholder-style" value="{{inputContent}}" maxlength="13" onInput="inputSearchContent" placeholder="请输入要查询的13位快递单号">
+      </view>
+    </view>
+    <view class="{{isTrueInputNum?'search-button active':'search-button'}}" onTap="searchByNumber">查件</view>
+  </view>
+  <view class="search-history">
+    <view class="title">历史记录</view>
+    <view class="history-list">
+      <view class="history-list-item" onTap="goDetail">12412312321</view>
+      <view class="history-list-item" onTap="goDetail2">12412312321</view>
+    </view>
+  </view>
+</view>

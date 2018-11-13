@@ -1,0 +1,109 @@
+.container{
+    background: #fff;
+}
+.login-background{
+    width:100%;
+    height:192rpx;
+    outline-width: 0;
+    vertical-align: top;
+}
+.switch-tab{
+    height:80rpx;
+    background: #f0f0f0;
+    color: #999;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.switch-tab>view{
+    flex: 1;
+}
+.switch-tab .actives{
+    background: #fff;
+    color: #ff9900;
+    font-weight: 700;
+}
+.input-phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:0 40rpx;
+}
+.input-area{
+    width:560rpx;
+    margin:100rpx auto;
+}
+.input-view{
+    flex: 1;
+}
+.phone-logo{
+    width:40rpx;
+    height:40rpx;
+    vertical-align: middle;
+}
+.search-close{
+    width:30rpx;
+    height:30rpx;
+    vertical-align: middle;
+}
+.input-view{
+    height:90rpx;
+    line-height: 90rpx;
+}
+.input-view input{
+    padding:0;
+    height:90rpx;
+    line-height: 90rpx;
+    font-size: 36rpx;
+    margin-left:26rpx;
+    color: #333;
+}
+.placeholder-style{
+    font-size: 36rpx;
+    color: #cacaca;
+}
+.lines{
+    height:10rpx;
+    border:1rpx solid #cacaca;
+    border-top:none;
+}
+.get-code-button{
+    width:150rpx;
+    height:50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    color: #fff;
+    background: #ff9900;
+    border-radius: 6rpx;
+    font-size: 24rpx;
+}
+.get-active{
+    background: #b7b7b7;
+}
+.login-now{
+    width:560rpx;
+    height:88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 6rpx;
+    background: #ff9900;
+    margin:150rpx auto;
+}
+/*支付宝登录*/
+.zfb-login{
+    text-align: center;
+    padding-top:100rpx;
+}
+.zfb-login image{
+    width:500rpx;
+    height:470rpx;
+}
+.zfb-btn{
+    background: rgb(0,170,238);
+    margin-top:30rpx;
+}

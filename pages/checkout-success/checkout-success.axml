@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="header">
+        <view class="header-title">
+            <image src="../../images/success.png"></image>
+            <text class="success-text">下单成功</text>
+        </view>
+        <view class="show-remark-text">
+            <view>
+                <text>快递小哥将在
+                    <text class="come-time">明天 10:00</text>
+                    之前联系您进行上门取件
+                </text>
+            </view>
+            <view>
+                <text>请保持手机畅通</text>
+            </view>
+        </view>
+        <image src="../../images/link.png" class="link-left"></image>
+        <image src="../../images/link.png" class="link-right"></image>
+    </view>
+    <view class="order-list">
+        <view class="order-list-item" onTap="goOrderDetail">
+            <view class="order-number">
+                <text>订单号：1234123123123</text>
+            </view>
+            <view class="send-collection-city">
+                <view class="send-city">李四[上海市]</view>
+                <view class="arrow-container">
+                    <image src="../../images/red-arrow.png" class="red-arrow"></image>
+                </view>
+                <view class="collection-city">李四[上海市]</view>
+            </view>
+            <image src="../../images/next.png" class="next-logos"></image>
+        </view>
+        <view class="order-list-item" onTap="goOrderDetail">
+            <view class="order-number">
+                <text>订单号：1234123123123</text>
+            </view>
+            <view class="send-collection-city">
+                <view class="send-city">李四[上海市]</view>
+                <view class="arrow-container">
+                    <image src="../../images/red-arrow.png" class="red-arrow"></image>
+                </view>
+                <view class="collection-city">李四[上海市]</view>
+            </view>
+            <image src="../../images/next.png" class="next-logos"></image>
+        </view>
+    </view>
+    <view class="send-again">再来一单</view>
+</view>

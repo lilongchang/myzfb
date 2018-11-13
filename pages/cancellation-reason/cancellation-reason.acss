@@ -1,0 +1,42 @@
+.container{
+    background: #fff;
+    margin-top:10rpx;
+}
+.title{
+    font-size: 32rpx;
+    color: #231815;
+    padding:30rpx;
+    text-align: center;
+}
+.reason-list{
+    padding:34rpx 60rpx;
+}
+.reason-list-item{
+    font-size: 28rpx;
+    color: #231815;
+    margin-bottom:40rpx;
+}
+.reason-list image{
+    width:40rpx;
+    height:40rpx;
+    vertical-align: middle;
+    margin-right:30rpx;
+}
+.cancellation-order{
+    text-align: center;
+}
+.cancellation-order .cancellation-order-btn{
+    display: inline-block;
+    width:690rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+    background: #a4a4a4;
+    border-radius: 6rpx;
+    margin-top:154rpx;
+}
+.cancellation-order .actives{
+    background: #ff9900;
+}

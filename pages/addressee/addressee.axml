@@ -1,0 +1,117 @@
+<view class='add-sebder-container'>
+    <view class='linkmain-info'>
+        <view class='linkmain-info-item'>
+            <view class='linkman-name'>
+                <input-item placeholder="姓名" placeholder-class='set-input-style' type="text" value="{{senderMessage.name}}" clear="{{true}}" onInput="onItemInput" onClear="onClear"></input-item>
+            </view>
+            <view class='line'></view>
+            <view class='linkmain-phone'>
+                <input-item placeholder="手机或固话" placeholder-class='set-input-style' type="text" value="{{senderMessage.phone}}" clear="{{true}}" onInput="onItemInput" onClear="onClear"></input-item>
+            </view>
+        </view>
+        <view class='linkmain-info-item'>
+            <view class='linkman-area'>
+                <input-item placeholder="省市区" placeholder-class='set-input-style' type="text" value="{{senderMessage.address}}" onInput="onItemInput"></input-item>
+                <image src="../../image/next.png"></image>
+            </view>
+            <view class='linkmain-map' onTap="getMap">
+                <image src="../../images/map.png"></image>
+            </view>
+        </view>
+        <view class='linkmain-info-item' style="height: inherit">
+            <view class="address-details">
+                <textarea class="address-detail-input" placeholder-class='set-input-style' auto-height="{{true}}" style="min-height: 10rpx" value="{{senderMessage.detailAddress}}" maxlength="-1" placeholder="详细地址(详细到镇、街道、门牌号)"></textarea>
+            </view>
+        </view>
+    </view>
+    <view class="set-default-address" onTap="switchDefaultArea">
+        <image src="{{setDefaultAddress?checkedLogo:unCheckedLogo}}"></image>
+        <text>设置为默认寄件地址</text>
+    </view>
+    <view>
+        <view class="smart-address">
+            <view class="copy-logo">
+                <image src="../../images/smart_address.png"></image>
+            </view>
+            <view class="remark-text">
+                <view>
+                    <text class="smart-title">智能地址填写</text>
+                </view>
+                <view class="smart-mark">
+                    <text class="smart-copy-remark">粘贴一整段地址，自动识别姓名、电话、地址、物品名称最多填写<text decode="{{true}}" style="color: #ff9900;">&nbsp;100&nbsp;</text>条，多个地址用[<text decode="{{true}}" style="color: #ff9900;">&nbsp;;&nbsp;</text>]隔开</text>
+                </view>
+            </view>
+            <view class="up-down" onTap='switchTextareaShow'>
+                <image src="{{showTextarea?upDownImg:downUpImg}}"></image>
+            </view>
+        </view>
+        <view class="smart-textarea" hidden='{{showTextarea}}'>
+            <textarea class="address-detail-input" onInput='setTextareaValue' placeholder-class='set-style' value="{{smartTextValue}}" maxlength="50" placeholder="例如：王小明，13585854373，上海市青浦区盈巷东路6779号，衣服; 李四，15865241125，上海市青浦区盈巷东路6669号，书籍"></textarea>
+        </view>
+        <view class="btn-container" hidden='{{showTextarea}}'>
+            <view class="smart-button" onTap='smartInputSave'>智能填写</view>
+            <view class="clear-content" hidden="{{isShowClearText}}" onTap="clearContent">清空内容</view>
+        </view>
+    </view>
+    <!--最近联系人-->
+    <!--<view class="recent-contacts">-->
+    <!--<view class='recent-contacts-item'>-->
+    <!--<view class='base-message'>-->
+    <!--<text>李四</text>-->
+    <!--<text class='recent-contacts-phone'>15737315092</text>-->
+    <!--</view>-->
+    <!--<view class='recent-contacts-address'>-->
+    <!--<text>上海市 上海市 青浦区盈巷东路6779号</text>-->
+    <!--</view>-->
+    <!--</view>-->
+    <!--<view class='recent-contacts-item'>-->
+    <!--<view class='base-message'>-->
+    <!--<text>李四</text>-->
+    <!--<text class='recent-contacts-phone'>15737315092</text>-->
+    <!--</view>-->
+    <!--<view class='recent-contacts-address'>-->
+    <!--<text>上海市 上海市 青浦区盈巷东路6779号</text>-->
+    <!--</view>-->
+    <!--</view>-->
+    <!--<view class='recent-contacts-item'>-->
+    <!--<view class='base-message'>-->
+    <!--<text>李四</text>-->
+    <!--<text class='recent-contacts-phone'>15737315092</text>-->
+    <!--</view>-->
+    <!--<view class='recent-contacts-address'>-->
+    <!--<text>上海市 上海市 青浦区盈巷东路6779号</text>-->
+    <!--</view>-->
+    <!--</view>-->
+    <!--</view>-->
+    <!--<view class="click-look-more">-->
+    <!--<text >点击地址簿，查看更多>></text>-->
+    <!--</view>-->
+    <!--附近地址-->
+    <view class="nearby-address">
+        <view class="nearby-address-title">
+            <image src="../../images/map.png" class="nearby-logo"></image>
+            <text>附近地址</text>
+        </view>
+        <view class="recent-contacts" style="margin-top: 0">
+            <view class='recent-contacts-item'>
+                <view class='base-message'>
+                    <text>韵达-北门</text>
+                </view>
+                <view class='recent-contacts-address'>
+                    <text>青浦区盈巷东路6779号</text>
+                </view>
+            </view>
+            <view class='recent-contacts-item'>
+                <view class='base-message'>
+                    <text>上海华友有限公司</text>
+                </view>
+                <view class='recent-contacts-address'>
+                    <text>青浦区盈巷东路6665号</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='bottom-button-container'>
+        <view class='edit-address-btn'>确定</view>
+    </view>
+</view>

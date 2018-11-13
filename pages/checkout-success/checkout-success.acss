@@ -1,0 +1,112 @@
+.header{
+    background: #fff;
+    width:690rpx;
+    height:240rpx;
+    margin:30rpx auto 20rpx auto;
+    position: relative;
+}
+.header-title{
+    text-align: center;
+    padding-top:34rpx;
+}
+.header-title image{
+    width:100rpx;
+    height:70rpx;
+    vertical-align: middle;
+}
+.success-text{
+    font-size: 36rpx;
+    color: #ff9900;
+}
+.show-remark-text{
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+    line-height: 45rpx;
+    margin-top:20rpx;
+}
+.show-remark-text .come-time{
+   font-size: 28rpx;
+    color: #ff9900;
+    padding: 0 10rpx;
+}
+.link-left,.link-right {
+    width:20rpx;
+    height:80rpx;
+    position: absolute;
+    bottom:-45rpx;
+}
+.link-left{
+    left:80rpx;
+}
+.link-right{
+    right:80rpx;
+}
+.send-collection-city{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    align-items: center;
+    font-size: 28rpx;
+    color: #999;
+}
+.send-collection-city .red-arrow{
+    width:120rpx;
+    height:10rpx;
+    vertical-align: middle;
+}
+.order-list{
+    background: #fff;
+    width:630rpx;
+    margin:20rpx auto 20rpx auto;
+    padding:20rpx 30rpx 0 30rpx;
+}
+.order-list-item{
+    padding:40rpx 0;
+    border-top: 1rpx solid #e5e5e5;
+    position: relative;
+}
+.order-list-item:first-child{
+    border:none;
+}
+.arrow-container{
+    width:190rpx;
+    text-align: center;
+}
+.order-number{
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom:20rpx;
+}
+.send-city,.collection-city{
+    width:200rpx;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.next-logos{
+    width:14rpx;
+    height:24rpx;
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+
+}
+.send-again{
+    width:690rpx;
+    height:80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 8rpx;
+    background: #ff9900;
+    position: fixed;
+    bottom:40rpx;
+    left:0;
+    right:0;
+    margin:auto;
+}

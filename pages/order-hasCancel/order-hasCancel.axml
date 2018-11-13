@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="order-title">订单已取消</view>
+  <view class="main-section">
+    <image src="../../images/ordered.png"></image>
+    <view class="content-risk">
+      <view>订单已取消</view>
+    </view>
+  </view>
+  <view class="cancellation-order">
+    <view class="cancellation-order-btn" onTap="sendAgain">重新下单</view>
+  </view>
+
+</view>
